@@ -35,7 +35,6 @@ def getData( firstName , lastName  ):
         queryName = urlEncode( queryName )
         query = "https://pub.orcid.org/v3.0/search?q=" + queryName
         root = getTree( query )
-        print(query)
         hits = root.findall('s:result' , ns )
 
     count = 0
