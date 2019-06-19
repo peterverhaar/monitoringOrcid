@@ -26,16 +26,16 @@ def getData( firstName , lastName  ):
 
     fullOutput = ''
 
-    query = f'https://pub.orcid.org/v2.1/search?q=family-name:{lastName}+AND+given-names:{firstName}'
+    query = f'https://pub.orcid.org/v2.1/search?q=family-name:{ urlEncode(lastName) }+AND+given-names:{ urlEncode(firstName) }'
     root = getTree( query )
     hits = root.findall('s:result' , ns )
 
 
     if len(hits) == 0:
-        queryName = re.sub( r',' , '%20' , str(queryName) )
-        queryName = re.sub( r'\s+' , '%20' , str(queryName) )
+        queryName = urlEncode( queryName )
         query = "https://pub.orcid.org/v3.0/search?q=" + queryName
         root = getTree( query )
+        print(query)
         hits = root.findall('s:result' , ns )
 
     count = 0
