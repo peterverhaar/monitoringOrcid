@@ -67,7 +67,7 @@ url = f'{ baseUrl }?q=ringgold-org-id:{ ringgoldId }'
 findOrcids( url )
 
 url = f'{ baseUrl }?q=affiliation-org-name:*{ urlEncode(institutionName) }*'
-#findOrcids( url )
+findOrcids( url )
 
 url = f'https://pub.orcid.org/v3.0/search/?q=grid-org-id:{ gridId }'
 findOrcids( url )
