@@ -23,10 +23,10 @@ The code makes use of the following libraries and modules:
 Usage of findOrcid.py:
 
 1. Edit the config.py file, and provide the GRID id, the RINGGold Id, the name of the institution and the mail domain.
-2. On the Command line, type in 'python findOrcid.py'
+2. Run the code in the Command line: 'python findOrcid.py'
 
 Usage of orcidNameSearch.py:
 
 1. Create an Excel sheet listing the names of all the researchers active at your university. SUch a list can usually be obtained from the HR department. 
-2. On the Command line, type in 'python findOrcid.py'
+2. Run the code in the Command line: 'python orcidNameSearch.py'
 
