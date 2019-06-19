@@ -4,7 +4,7 @@
 
 The code in this repository can be used collect all the Orcid IDs associated with a specific academic institution. The data can be collected in two ways:
 
-1. 'findOrcids.py' can be used to query the ORCID database, using the 3.0 version of the ORCID API. The ORCID database can be queries using the grid ID, the Ringgold ID, the name or the mail domain. The values to be used in these queries firstly need to be defined in the file 'config.py'. The code creates a csv file with the last name, the first name, the ORCID id, the creation date, the number of works and affiliation information. If the number of ORCID ids that are found is very large, running this code may take quite a long time.
+1. 'findOrcids.py' can be used to query the ORCID database, using the 3.0 version of the ORCID API. The ORCID database can be queries using the grid ID, the Ringgold ID, the name or the mail domain. The values to be used in these queries firstly need to be defined in the file 'config.py'. 
 
 2. 'orcidNameSearch.py' can be used to query the ORCID database on the basis of a list of names. The names of all the researchers to be checked firstly needs to be stored in an Excel file named "researchers.xlsx". The code can be used to check whether the researchers listed in the Excel sheet have claimed an ORCID id. 
 
@@ -24,6 +24,8 @@ Usage of findOrcid.py:
 
 1. Edit the config.py file, and provide the GRID id, the RINGGold Id, the name of the institution and the mail domain.
 2. Run the code in the Command line: 'python findOrcid.py'
+
+The code creates a csv file with the last name, the first name, the ORCID id, the creation date, the number of works and affiliation information. If the number of ORCID ids that are found is very large, running this code may take quite a long time. 
 
 Usage of orcidNameSearch.py:
 
