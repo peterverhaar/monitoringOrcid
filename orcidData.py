@@ -65,6 +65,9 @@ def getAffiliations( recordXml ):
     eCount = 0
 
     for e in empl:
+        orgName = ''
+        departmentName = ''
+        
         org = e.find( 'e:employment-summary/c:organization/c:name' , ns )
         if org is not None:
             orgName = org.text
