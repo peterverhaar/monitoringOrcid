@@ -1,5 +1,6 @@
 
 import urllib.request
+import urllib.parse
 import xml.etree.ElementTree as ET
 import re
 import pandas as pd
@@ -84,10 +85,8 @@ out.write( 'lastName,firstName,orcid,OrcidlastName,OrcidfirstName,creationDate,n
 xl = pd.ExcelFile( 'researchers.xlsx'  )
 df = xl.parse( 'Sheet1' )
 for index , column in df.iterrows():
-    firstName = column['firstName']
-    lastName = column['lastName']
     if pd.notnull( column['lastName'] ):
-        print( firstName , lastName )
-        out.write( getData( firstName , lastName  ) )
+        print( column['firstName'] , column['lastName'] )
+        out.write( getData( urllib.parse.quote( column['firstName'] )  , urllib.parse.quote( column['lastName']  ) ) )
 
 out.close()
